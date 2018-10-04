@@ -63,23 +63,22 @@ MenuItem.prototype.render = function() {
 
     li.appendChild(link);
 
+    this.internalRender(li);
+
     return li;
 }
 
-function MenuItemWithSubmenu(className, menu) {
-    Container.call(this, null, className, 'li');
+MenuItem.prototype.internalRender = function () {
 
-    this.className = className;
+}
+
+function MenuItemWithSubmenu(className, title, href, menu) {
+    MenuItem.call(this, className, title, href)
+
     this.menu = menu;
 }
 
-MenuItemWithSubmenu.prototype = Object.create(Container.prototype);
-MenuItemWithSubmenu.prototype.render = function() {
-    var li = document.createElement('li');
-
-    li.className = this.className;
-
+MenuItemWithSubmenu.prototype = Object.create(MenuItem.prototype);
+MenuItemWithSubmenu.prototype.internalRender = function (li) {
     li.appendChild(this.menu.render());
-
-    return li;
 }
