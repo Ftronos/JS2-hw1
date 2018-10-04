@@ -3,7 +3,13 @@
     <title>Hamburger</title>
     <script src="hamburger.js"></script>
     <script>
+        var hamburger = new Hamburger(Hamburger.SIZE_LARGE, [Hamburger.STUFFING_POTATO, Hamburger.STUFFING_SALAD]);
 
+        hamburger.addTopping([Hamburger.TOPPING_MAYO, Hamburger.TOPPING_SPICE, Hamburger.TOPPING_SPICE]);
+
+        //hamburger.removeTopping(Hamburger.TOPPING_SPICE);
+
+        console.log(hamburger);
     </script>
 </head>
 <body>
