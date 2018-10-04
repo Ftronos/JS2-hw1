@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>Hamburger</title>
+    <script src="hamburger.js"></script>
+    <script>
+        var hamburger = new Hamburger(Hamburger.SIZE_LARGE, [Hamburger.STUFFING_POTATO, Hamburger.STUFFING_SALAD]);
+
+        hamburger.addTopping([Hamburger.TOPPING_MAYO, Hamburger.TOPPING_SPICE, Hamburger.TOPPING_SPICE, Hamburger.TOPPING_MAYO]);
+
+        hamburger.removeTopping(Hamburger.TOPPING_SPICE);
+        //hamburger.removeTopping(Hamburger.TOPPING_SPICE);
+
+        console.log('Список топпингов: '+hamburger.getToppings());
+        console.log('Размер бургера: '+hamburger.getSize());
+        console.log('Список ингридиентов: '+hamburger.getStuffing());
+        console.log('Полная стоимость: '+hamburger.calculatePrice());
+        console.log('Калорийность: '+hamburger.calculateCalories());
+        console.log(HamburgerException());
+    </script>
+</head>
+<body>
+
+</body>
+</html>
